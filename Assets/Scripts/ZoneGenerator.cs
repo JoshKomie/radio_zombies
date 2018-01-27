@@ -13,6 +13,8 @@ public class ZoneGenerator : MonoBehaviour {
 
 	Zone[,] zones;
 
+	public GameObject World;
+
 	// Use this for initialization
 	void Start () {
 		zones = new Zone[numInRow, numInRow];
@@ -38,6 +40,7 @@ public class ZoneGenerator : MonoBehaviour {
 				}
 				Vector2 pos = new Vector2(x * width + offset, y * width * .75f);
 				GameObject instance = Instantiate(ZonePrefab, pos, Quaternion.identity) as GameObject;
+				instance.transform.SetParent(World.transform);
 				zones[x, y] = instance.GetComponent<Zone>();
 			}
 		}
