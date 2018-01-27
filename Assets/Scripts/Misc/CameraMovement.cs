@@ -33,14 +33,8 @@ public class CameraMovement : MonoBehaviour {
 			newpos.x += speedAfterZoom * Time.deltaTime;
 		}
 		transform.position = newpos;
-		// float scale = 1.0f + Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
-		// world.transform.localScale *= scale;
 		float scroll = 1.0f + Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * -1;
-		// transform.Translate(0, scroll * zoomSpeed, scroll * zoomSpeed, Space.World);
 		camera.orthographicSize *= scroll;
 	}
 
-	private float speedAfterZoom() {
-		return speed * (camera.orthographicSize);
-	}
 }
