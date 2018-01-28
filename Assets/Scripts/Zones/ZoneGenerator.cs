@@ -14,12 +14,18 @@ public class ZoneGenerator : MonoBehaviour {
 	Zone[,] zones;
 
 	public GameObject World;
+	public GameObject Player;
+
+	//For setting zone terrains
+    public SpriteRenderer zoneRenderer;
+    public Sprite[] myTerrains;
 
 	// Use this for initialization
 	void Start () {
+		myTerrains = Resources.LoadAll<Sprite>("terrain_assets");
 		zones = new Zone[numInRow, numInRow];
 		createZones();
-		zones[startingx, startingy].GetComponent<Zone>().BuildTower();
+		zones[startingx, startingy].GetComponent<Zone>().createTower();
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(1);
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(5);
         zones[0, 0].GetComponent<Zone>().BuildCementary();
@@ -145,7 +151,23 @@ public class ZoneGenerator : MonoBehaviour {
 				GameObject instance = Instantiate(ZonePrefab, pos, Quaternion.identity) as GameObject;
 				instance.transform.SetParent(World.transform);
 				zones[x, y] = instance.GetComponent<Zone>();
+				zones[x, y].playerResources = Player.GetComponent<PlayerResources>();
+				instance.GetComponent<SpriteRenderer>().sprite = getTerrain();
+
 			}
 		}
 	}
+
+	//Gets a random terrain from Sprite List
+    private Sprite getTerrain()
+    {
+        Sprite sp;
+
+        int count = myTerrains.Length;
+
+        sp = myTerrains[Random.Range(0,count)];
+
+
+        return sp;
+    }
 }

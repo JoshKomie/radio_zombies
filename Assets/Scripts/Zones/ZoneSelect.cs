@@ -21,10 +21,11 @@ public class ZoneSelect : MonoBehaviour {
 
 	public void OnMouseDown() {
 		if ( playerInput.SelectHexModeEnabled() && highlight.activeInHierarchy) {
-			Debug.Log("place");
 			if (GetComponent<Zone>().BuildTower()) {
-				playerInput.DisableSelectHexMode();
+			} else {
+				ErrorMessage.Error("Cannot build tower here!");
 			}
+			playerInput.DisableSelectHexMode();
 		}
 	}
 
@@ -32,7 +33,7 @@ public class ZoneSelect : MonoBehaviour {
 	}
 
 	public void OnMouseEnter() {
-		if (playerInput.SelectHexModeEnabled())
+		if (playerInput.SelectHexModeEnabled() && highlight.activeInHierarchy)
 			transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 		// Debug.Log("mouse  enter");
 		// if (playerInput && playerInput.SelectHexModeEnabled()) {

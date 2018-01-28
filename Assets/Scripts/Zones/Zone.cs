@@ -9,6 +9,10 @@ public class Zone : MonoBehaviour {
     public GameObject RegularTurretPrefab;
     public GameObject[] BuildSites;
     public string zoneType = "empty";
+    private PlayerResources resources;
+    public int TowerCost;
+    public PlayerResources playerResources;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,10 +23,19 @@ public class Zone : MonoBehaviour {
 		
 	}
 
-	public bool BuildTower() {
+    public void createTower() {
         zoneType = "RadioTower";
-		Instantiate(RadioTowerPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        return true;
+        Instantiate(RadioTowerPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+    }
+
+	public bool BuildTower() {
+        if (playerResources.GetCurrency() > TowerCost && zoneType == "empty") {
+            createTower();
+            playerResources.UseCurrency(TowerCost);
+            return true;
+        } else {
+            return false;
+        }
 	}
 
     public void BuildCementary()

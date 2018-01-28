@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!114 &114424377804791826
@@ -512,7 +512,7 @@ MonoBehaviour:
     type: 2}
   CementaryPrefab: {fileID: 1066450185861606, guid: 27c087d4a2e9c5340b9b9562c82ca912,
     type: 2}
-  RegularTurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  RegularTurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   BuildSites:
   - {fileID: 1254722276692770}
@@ -522,6 +522,8 @@ MonoBehaviour:
   - {fileID: 1327946260777500}
   - {fileID: 1407459164978418}
   zoneType: 
+  TowerCost: 10
+  playerResources: {fileID: 0}
 --- !u!114 &114676390797712536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!114 &114764511038982174
@@ -547,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!114 &114921520977198592
@@ -561,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!114 &114939430242598888
@@ -575,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!114 &114989663873308056
@@ -589,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0da2046e53bc24ea3bb275dd5bfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 1338464867028634, guid: 308434f2d7f10924e96076b1720513c3,
+  TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   occupant: empty
 --- !u!212 &212019984714494412

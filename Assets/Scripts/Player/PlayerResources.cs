@@ -19,6 +19,10 @@ public class PlayerResources : MonoBehaviour {
 		return currency;
 	}
 
+	public void UseCurrency(int amount) {
+		currency -= amount;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		
