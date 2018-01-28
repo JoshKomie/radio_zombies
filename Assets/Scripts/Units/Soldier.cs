@@ -21,11 +21,15 @@ public class Soldier : MonoBehaviour {
 	public float engageDistance = 10.0f;
 	public GameObject BulletPrefab = null;
 	public float fireRate = 1.0f;
+
+	public AudioClip shootSound;
+	private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
 		InvokeRepeating("findTarget", 0.0f, 3.0f);
-		InvokeRepeating("shoot", 0.0f, 1.0f);
+		InvokeRepeating("shoot", 0.0f, fireRate);
 	}
 	
 	// Update is called once per frame
@@ -37,6 +41,9 @@ public class Soldier : MonoBehaviour {
 			} else {
 				state = "move";
 			}
+		}
+		else {
+			findTarget();
 		}
 		switch (state) {
 			case "move":
@@ -50,7 +57,7 @@ public class Soldier : MonoBehaviour {
 	}
 
 	private void moveToTarget() {
-		Debug.Log("moveToTarget");
+		// Debug.Log("moveToTarget");
 		Vector2 vec2target = target.transform.position - transform.position;
 		float absx = Mathf.Abs(vec2target.x);
 		float absy = Mathf.Abs(vec2target.y);
@@ -80,13 +87,16 @@ public class Soldier : MonoBehaviour {
 			if (target == null)
 				return;
 		}
+		
 		GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity) as GameObject;
 		Bullet bulletc = bullet.GetComponent<Bullet>();
 		bulletc.target = target;
+		audioSource.clip = shootSound;
+		audioSource.Play();
 	}
 
 	private void shootAtTarget() {
-		Debug.Log("shoot at target");
+		// Debug.Log("shoot at target");
 		direction = Direction.NONE;
 		animator.speed = 0f;
 	}

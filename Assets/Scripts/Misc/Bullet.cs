@@ -17,11 +17,18 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (target == null) {
+			Destroy(gameObject);
+			return;
+		}
 		if (progress >= travelTime) {
 			target.GetComponent<Combat>().TakeDamage(damage);
-			if (gameObject)
+			if (gameObject) {
 				Destroy(gameObject);
+				return;
+			}
 		}
+		
 		transform.position = Vector3.Lerp(start, target.transform.position, progress / travelTime);
 		progress += Time.deltaTime;
 	}

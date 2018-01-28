@@ -51,10 +51,10 @@ public class RegularTurretController : MonoBehaviour {
         if (ZombiesList.Count > 0)
         {
             GameObject Target = ZombiesList[0];
-            if (Target.GetComponent<Combat>().Health > 0)
+            if (Target != null && Target.GetComponent<Combat>().Health > 0)
             {
                 SetGameObjectImage(Target.transform.position.x, Target.transform.position.y);
-                Target.GetComponent<Combat>().Health -= attack;
+                Target.GetComponent<Combat>().TakeDamage(attack);
   
             }
             else
@@ -80,7 +80,6 @@ public class RegularTurretController : MonoBehaviour {
             else
             {
                 GOImage.sprite = SRight;
-                this.GetComponent<Animation>().Play("TurretRightAtk");
             }
         }
         else

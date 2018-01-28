@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerResources : MonoBehaviour {
 
 	private int currency = 0;
-	private int startingCurrency;
+	public int startingCurrency;
 	// Use this for initialization
 	void Start () {
 		currency = startingCurrency;

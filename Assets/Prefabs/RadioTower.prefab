@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4079037694422110}
   - component: {fileID: 212697763627876866}
   - component: {fileID: 114428940854690816}
+  - component: {fileID: 114356027838303662}
   m_Layer: 0
   m_Name: RadioTower
-  m_TagString: Untagged
+  m_TagString: RadioTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114356027838303662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526810152218936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127701ee7c6e219448a5d50c5f3d908d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1000
 --- !u!114 &114428940854690816
 MonoBehaviour:
   m_ObjectHideFlags: 1
