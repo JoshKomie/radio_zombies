@@ -19,12 +19,13 @@ public class Soldier : MonoBehaviour {
 
 	private GameObject target = null;
 	public float engageDistance = 10.0f;
-	public GameObject bullet = null;
-
+	public GameObject BulletPrefab = null;
+	public float fireRate = 1.0f;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
 		InvokeRepeating("findTarget", 0.0f, 3.0f);
+		InvokeRepeating("shoot", 0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -68,6 +69,20 @@ public class Soldier : MonoBehaviour {
 		}
 		animator.speed = .5f;
 		
+	}
+
+	private void shoot() {
+		if (state != "shoot" ) {
+			return;
+		}
+		if (target == null) {
+			findTarget();
+			if (target == null)
+				return;
+		}
+		GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity) as GameObject;
+		Bullet bulletc = bullet.GetComponent<Bullet>();
+		bulletc.target = target;
 	}
 
 	private void shootAtTarget() {

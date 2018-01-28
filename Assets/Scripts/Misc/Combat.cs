@@ -5,8 +5,8 @@ using UnityEngine;
 public class Combat : MonoBehaviour {
 
 	public int Health;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -14,4 +14,14 @@ public class Combat : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void TakeDamage(int amount)
+    {
+
+        Health -= amount;
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
