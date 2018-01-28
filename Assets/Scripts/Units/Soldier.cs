@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -103,8 +103,9 @@ public class Soldier : MonoBehaviour {
 
 	private void findTarget() {
 		GameObject[] targets = GameObject.FindGameObjectsWithTag("Zombie");
-		if (targets.Length > 0) {
-			target = targets[0];
+
+        if (targets.Length > 0) {
+			target = findClosestZombie(targets);
 		}
 	}
 
@@ -143,4 +144,28 @@ public class Soldier : MonoBehaviour {
 		direction = Direction.DOWN;
 	}
 
+    private GameObject findClosestZombie(GameObject[] zl)
+    {
+
+        GameObject closest = null;
+        float closestDist = Mathf.Infinity;
+
+
+
+        for (int i = 0; i < zl.Length; i++)
+        {
+
+            float dist = Vector3.Distance(transform.position, zl[i].transform.position);
+
+
+            if (dist < closestDist && zl[i].GetComponent<Combat>().Health != null)
+            {
+                closestDist = dist;
+                closest = zl[i];
+            }
+        }
+
+        return closest;
+    }
 }
+

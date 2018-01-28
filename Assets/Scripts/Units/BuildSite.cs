@@ -12,8 +12,8 @@ public class BuildSite : MonoBehaviour {
 	private GameObject structure;
 	private int turretCost = 3;
 	private int barracksCost = 5;
-	private int flameTurretCost = 8;
-	private int superBarracksCost = 12;
+	private int flameTurretCost = 20;
+	private int superBarracksCost = 15;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player");
@@ -39,10 +39,10 @@ public class BuildSite : MonoBehaviour {
 	}
 
 	public bool buildStructure(string type, GameObject prefab, int cost) {
-		if (playerResources.GetCurrency() >= turretCost) {
+		if (playerResources.GetCurrency() >= cost) {
 			structure = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
 			occupant = type;
-			playerResources.UseCurrency(turretCost);
+			playerResources.UseCurrency(cost);
 			return true;
 		} else {
 			return false;
@@ -73,4 +73,9 @@ public class BuildSite : MonoBehaviour {
 		}
 		playerInput.DisableSelectBuildSiteMode();
 	}
+
+	public void DestroyStructure()
+    {
+        Destroy(structure);
+    }
 }

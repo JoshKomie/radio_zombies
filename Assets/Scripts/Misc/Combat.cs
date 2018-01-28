@@ -17,14 +17,27 @@ public class Combat : MonoBehaviour {
     private AudioSource audioSource;
 
 
+    public bool healthbarEnabled = true;
+    public GameObject HealthBarPrefab;
+    private GameObject healthBar;
+    private int maxHealth;
     // Use this for initialization
     void Start () {
+        maxHealth = Health;
         audioSource = GetComponent<AudioSource>();
+        if (HealthBarPrefab) {
+            GameObject g = GameObject.Find("WorldSpaceCanvas");
+            healthBar = Instantiate(HealthBarPrefab) as GameObject;
+            healthBar.transform.SetParent(g.transform);
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (healthBar) {
+            healthBar.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, 0f);
+            healthBar.GetComponent<Slider>().value = (float)Health / (float)maxHealth;
+        }
 	}
 
     private AudioClip randomClip() {
@@ -48,6 +61,7 @@ public class Combat : MonoBehaviour {
                 if (textObj);
                     textObj.GetComponent<Text>().text = (++ZombiesKilled.num).ToString();
             } else if (GetComponent<RadioTower>()) {
+                GetComponent<RadioTower>().DestroyZoneBuildSites();
                 Debug.Log("Radio tower die!");
                 GameObject[] towers = GameObject.FindGameObjectsWithTag("RadioTower");
                 Debug.Log("towers length" + towers.Length.ToString());
@@ -58,6 +72,9 @@ public class Combat : MonoBehaviour {
                 Debug.Log("set zonetype=" + GetComponent<RadioTower>().zone.zoneType);
             }
             Destroy(gameObject);
+            if (healthBar) {
+                Destroy(healthBar);
+            }
         }
     }
 }

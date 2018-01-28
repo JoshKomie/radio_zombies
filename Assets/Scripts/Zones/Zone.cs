@@ -66,4 +66,12 @@ public class Zone : MonoBehaviour {
             BuildSites[i].GetComponent<SpriteRenderer>().enabled = false;
         }
     }
+
+    public void DestroyZoneBuildSitesStructures()
+    {
+        for (int i = 0; i < BuildSites.Length; i++)
+        {
+            BuildSites[i].GetComponent<BuildSite>().DestroyStructure();
+        }
+    }
 }

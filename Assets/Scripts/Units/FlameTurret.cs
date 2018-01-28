@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlameTurret : MonoBehaviour {
 
     private List<GameObject> ZombiesList = new List<GameObject>();
-    private int attack = 100;
+    private int attack = 8;
     private float attackSpeed = 0.5f;
     private float Range = 1;
     SpriteRenderer GOImage;

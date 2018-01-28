@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitPrefab: {fileID: 1738677643609168, guid: decb3b299c04e2046a15bc32c33bda58, type: 2}
-  spawnRate: 45
+  spawnRate: 80
 --- !u!212 &212507444861828886
 SpriteRenderer:
   m_ObjectHideFlags: 1

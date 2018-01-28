@@ -184,6 +184,9 @@ MonoBehaviour:
   Health: 8
   damageTakenSounds:
   - {fileID: 8300000, guid: e0dd30504e57b58488ff9021fbfef815, type: 3}
+  healthbarEnabled: 1
+  HealthBarPrefab: {fileID: 1776657873365284, guid: dda55296f60a7524fa226d189b678edb,
+    type: 2}
 --- !u!114 &114376921704480750
 MonoBehaviour:
   m_ObjectHideFlags: 1

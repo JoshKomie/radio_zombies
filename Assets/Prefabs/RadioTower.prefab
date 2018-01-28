@@ -55,6 +55,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 20
   damageTakenSounds: []
+  healthbarEnabled: 1
+  HealthBarPrefab: {fileID: 1776657873365284, guid: dda55296f60a7524fa226d189b678edb,
+    type: 2}
 --- !u!114 &114428940854690816
 MonoBehaviour:
   m_ObjectHideFlags: 1

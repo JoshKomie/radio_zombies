@@ -7,8 +7,8 @@ using System;
 public class RegularTurretController : MonoBehaviour {
 
     private List<GameObject> ZombiesList = new List<GameObject>();
-    private int attack = 100;
-    private float attackSpeed = 1;
+    private int attack = 4;
+    private float attackSpeed = 2.5f;
     private float Range = 1;
     SpriteRenderer GOImage;
     public Sprite SUp;

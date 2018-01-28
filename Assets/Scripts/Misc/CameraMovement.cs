@@ -11,6 +11,7 @@ public class CameraMovement : MonoBehaviour {
 	public GameObject world;
 
 	private Camera camera;
+	public float maxZoomOut = 15.0f;
 		// Use this for initialization
 	void Start () {
 		camera = GetComponent<Camera>();
@@ -33,8 +34,11 @@ public class CameraMovement : MonoBehaviour {
 			newpos.x += speedAfterZoom * Time.deltaTime;
 		}
 		transform.position = newpos;
-		float scroll = 1.0f + Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * -1;
-		camera.orthographicSize *= scroll;
+			float scroll = 1.0f + Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * -1;
+			camera.orthographicSize *= scroll;
+		if (camera.orthographicSize >= maxZoomOut) {
+			camera.orthographicSize = maxZoomOut;
+		}
 	}
 
 }

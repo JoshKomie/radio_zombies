@@ -24,4 +24,8 @@ public class RadioTower : MonoBehaviour {
 	void Update () {
 		
 	}
+	public void DestroyZoneBuildSites()
+    {
+        zone.DestroyZoneBuildSitesStructures();
+    }
 }
