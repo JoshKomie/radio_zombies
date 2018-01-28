@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ErrorMessage : MonoBehaviour {
 	public static void Error(string error) {
-		instance.GetComponent<Text>().text = error;
+		//instance.GetComponent<Text>().text = error;
 	}
 	public static ErrorMessage instance;
 	// Use this for initialization
