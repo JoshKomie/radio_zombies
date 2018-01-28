@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ZombieSpawner : MonoBehaviour {
 
@@ -12,7 +14,7 @@ public class ZombieSpawner : MonoBehaviour {
     private float waveRate = 30f;
     public int zombieCount;
 
-
+    public int winWave = 10;
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("SpawnWave", start, 30f);
@@ -25,6 +27,13 @@ public class ZombieSpawner : MonoBehaviour {
     private void SpawnWave()
     {
         zombieCount = 0;
+        GameObject waveText = GameObject.Find("WaveText");
+        if (waveText) {
+            waveText.GetComponent<Text>().text = currentWave.ToString();
+        }
+        if (currentWave >= winWave) {
+            SceneManager.LoadScene("win_game",LoadSceneMode.Single);
+        }
         int numZombies = numberZombies(currentWave++);
         for (int i = 0; i < numZombies; i++) {
             float variance = 10.0f;

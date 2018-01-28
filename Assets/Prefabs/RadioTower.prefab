@@ -53,7 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127701ee7c6e219448a5d50c5f3d908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1000
+  Health: 1
+  damageTakenSounds: []
 --- !u!114 &114428940854690816
 MonoBehaviour:
   m_ObjectHideFlags: 1

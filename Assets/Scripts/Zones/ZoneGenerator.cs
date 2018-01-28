@@ -29,7 +29,16 @@ public class ZoneGenerator : MonoBehaviour {
 		Camera.main.transform.position = zones[startingx, startingy].transform.position;
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(1);
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(5);
-        zones[0, 0].GetComponent<Zone>().BuildCementary();
+        // zones[7, 7].GetComponent<Zone>().BuildCementary();
+
+		 zones[0, 0].GetComponent<Zone>().BuildCementary();
+        zones[15, 0].GetComponent<Zone>().BuildCementary();
+        zones[15, 7].GetComponent<Zone>().BuildCementary();
+        zones[15, 15].GetComponent<Zone>().BuildCementary();
+        zones[8, 0].GetComponent<Zone>().BuildCementary();
+        zones[0, 15].GetComponent<Zone>().BuildCementary();
+        zones[8, 15].GetComponent<Zone>().BuildCementary();
+        zones[0, 8].GetComponent<Zone>().BuildCementary();
 
 	}
 	
