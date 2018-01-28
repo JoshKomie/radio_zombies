@@ -26,6 +26,7 @@ public class ZoneGenerator : MonoBehaviour {
 		zones = new Zone[numInRow, numInRow];
 		createZones();
 		zones[startingx, startingy].GetComponent<Zone>().createTower();
+		Camera.main.transform.position = zones[startingx, startingy].transform.position;
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(1);
         //zones[startingx, startingy].GetComponent<Zone>().BuildRegularTurret(5);
         zones[0, 0].GetComponent<Zone>().BuildCementary();

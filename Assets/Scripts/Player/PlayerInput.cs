@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour {
 	private bool selectHexMode = false;
 	private bool selectBuildSiteMode = false;
 	public GameObject world;
+	public string structureType = "turret";
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +16,10 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void SetStructureType(string s) {
+		structureType = s;
 	}
 
 	public void EnableSelectHexMode() {

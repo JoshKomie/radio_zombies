@@ -484,6 +484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
   occupant: empty
 --- !u!114 &114424377804791826
 MonoBehaviour:
@@ -537,6 +539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
   occupant: empty
 --- !u!114 &114764511038982174
 MonoBehaviour:
@@ -550,6 +554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
+    type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
   occupant: empty
 --- !u!114 &114921520977198592
@@ -565,6 +571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
   occupant: empty
 --- !u!114 &114939430242598888
 MonoBehaviour:
@@ -579,6 +587,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
   occupant: empty
 --- !u!114 &114989663873308056
 MonoBehaviour:
@@ -592,6 +602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
+    type: 2}
+  BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
   occupant: empty
 --- !u!212 &212019984714494412

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildSite : MonoBehaviour {
-	public GameObject TurretPrefab;
+	public GameObject TurretPrefab, BarracksPrefab;
 	private GameObject player;
 	private PlayerInput playerInput;
 	private ZoneGenerator zoneGenerator;
@@ -11,6 +11,7 @@ public class BuildSite : MonoBehaviour {
 	private PlayerResources playerResources;
 	private GameObject structure;
 	private int turretCost = 3;
+	private int barracksCost = 3;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player");
@@ -35,12 +36,32 @@ public class BuildSite : MonoBehaviour {
 		}
 	}
 
+	public bool buildStructure(string type, GameObject prefab, int cost) {
+		if (playerResources.GetCurrency() >= turretCost) {
+			structure = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
+			occupant = type;
+			playerResources.UseCurrency(turretCost);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public void OnMouseDown() {
 		Debug.Log("build site mouse down!");
 		if ( playerInput.selectBuildSiteModeEnabled() && GetComponent<SpriteRenderer>().enabled) {
-			if (BuildTurret()) {
-				// playerInput.DisableSelectHexMode();
+			string type = playerInput.structureType;
+			switch (type) {
+				case "turret":
+					buildStructure("turret", TurretPrefab, turretCost);
+					break;
+				case "barracks":
+					buildStructure("barracks", BarracksPrefab, barracksCost);
+					break;
 			}
+			// if (buildStructure("turret", TurretPrefab, turretCost)) {
+			// 	// playerInput.DisableSelectHexMode();
+			// }
 		}
 		playerInput.DisableSelectBuildSiteMode();
 	}
