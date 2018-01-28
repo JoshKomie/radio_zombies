@@ -47,12 +47,14 @@ public class ZoneGenerator : MonoBehaviour {
 	}
 
 	public void showAvailableTowerSpots() {
+		Debug.Log("showAvailableTowerSpots");
 		bool offsetThisRow = false;
 		for (int y = 0; y < numInRow; y++) {
 			offsetThisRow = !offsetThisRow;
 			for (int x = 0; x < numInRow; x++) {
 				Zone zone = zones[x, y].GetComponent<Zone>();
 				ZoneSelect zoneSelect = zones[x, y].GetComponent<ZoneSelect>();
+				Debug.Log(zone.zoneType);
 				if (zone.zoneType == "RadioTower") {
 					Debug.Log("tower!");
 					int leftx = x - 1;

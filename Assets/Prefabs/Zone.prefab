@@ -521,8 +521,8 @@ MonoBehaviour:
   - {fileID: 1671819251177188}
   - {fileID: 1327946260777500}
   - {fileID: 1407459164978418}
-  zoneType: 
-  TowerCost: 10
+  zoneType: empty
+  TowerCost: 3
   playerResources: {fileID: 0}
 --- !u!114 &114676390797712536
 MonoBehaviour:

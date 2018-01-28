@@ -15,7 +15,6 @@ public class Zone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
@@ -29,6 +28,7 @@ public class Zone : MonoBehaviour {
     }
 
 	public bool BuildTower() {
+        Debug.Log(TowerCost + "" + playerResources.GetCurrency() + "" + zoneType);
         if (playerResources.GetCurrency() > TowerCost && zoneType == "empty") {
             createTower();
             playerResources.UseCurrency(TowerCost);
