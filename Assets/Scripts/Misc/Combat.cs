@@ -50,10 +50,12 @@ public class Combat : MonoBehaviour {
             } else if (GetComponent<RadioTower>()) {
                 Debug.Log("Radio tower die!");
                 GameObject[] towers = GameObject.FindGameObjectsWithTag("RadioTower");
-                Debug.Log("towers length");
-                if (towers.Length <= 0) {
+                Debug.Log("towers length" + towers.Length.ToString());
+                if (towers.Length - 1 <= 0) {
                     SceneManager.LoadScene("game over",LoadSceneMode.Single);
                 }
+                GetComponent<RadioTower>().zone.zoneType = "empty";
+                Debug.Log("set zonetype=" + GetComponent<RadioTower>().zone.zoneType);
             }
             Destroy(gameObject);
         }

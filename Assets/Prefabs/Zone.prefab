@@ -488,6 +488,8 @@ MonoBehaviour:
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
     type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
+    type: 2}
   occupant: empty
 --- !u!114 &114424377804791826
 MonoBehaviour:
@@ -526,7 +528,7 @@ MonoBehaviour:
   - {fileID: 1327946260777500}
   - {fileID: 1407459164978418}
   zoneType: empty
-  TowerCost: 3
+  TowerCost: 7
   playerResources: {fileID: 0}
 --- !u!114 &114676390797712536
 MonoBehaviour:
@@ -544,6 +546,8 @@ MonoBehaviour:
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
     type: 2}
   occupant: empty
 --- !u!114 &114764511038982174
@@ -563,6 +567,8 @@ MonoBehaviour:
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
     type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
+    type: 2}
   occupant: empty
 --- !u!114 &114921520977198592
 MonoBehaviour:
@@ -580,6 +586,8 @@ MonoBehaviour:
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
     type: 2}
   occupant: empty
 --- !u!114 &114939430242598888
@@ -599,6 +607,8 @@ MonoBehaviour:
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
     type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
+    type: 2}
   occupant: empty
 --- !u!114 &114989663873308056
 MonoBehaviour:
@@ -616,6 +626,8 @@ MonoBehaviour:
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
   FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
+  SuperBarracksPrefab: {fileID: 1382722830278774, guid: 4b9ac7ebdc874bc40b078100ad270b43,
     type: 2}
   occupant: empty
 --- !u!212 &212019984714494412

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildSite : MonoBehaviour {
-	public GameObject TurretPrefab, BarracksPrefab, FlameTurretPrefab;
+	public GameObject TurretPrefab, BarracksPrefab, FlameTurretPrefab, SuperBarracksPrefab;
 	private GameObject player;
 	private PlayerInput playerInput;
 	private ZoneGenerator zoneGenerator;
@@ -11,8 +11,9 @@ public class BuildSite : MonoBehaviour {
 	private PlayerResources playerResources;
 	private GameObject structure;
 	private int turretCost = 3;
-	private int barracksCost = 3;
-	private int flameTurretCost = 3;
+	private int barracksCost = 5;
+	private int flameTurretCost = 8;
+	private int superBarracksCost = 12;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player");
@@ -61,6 +62,9 @@ public class BuildSite : MonoBehaviour {
 					break;
 				case "flame_turret":
 					buildStructure("flame_turret", FlameTurretPrefab, flameTurretCost);
+					break;
+				case "super_barracks":
+					buildStructure("super_barracks", SuperBarracksPrefab, superBarracksCost);
 					break;
 			}
 			// if (buildStructure("turret", TurretPrefab, turretCost)) {

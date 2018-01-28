@@ -24,7 +24,8 @@ public class Zone : MonoBehaviour {
 
     public void createTower() {
         zoneType = "RadioTower";
-        Instantiate(RadioTowerPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        GameObject g = Instantiate(RadioTowerPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity) as GameObject;
+        g.GetComponent<RadioTower>().zone = this;
     }
 
 	public bool BuildTower() {

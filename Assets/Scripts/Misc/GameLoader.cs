@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameLoader : MonoBehaviour {
-
+	public string name = "game";
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +16,6 @@ public class GameLoader : MonoBehaviour {
 	}
 
 	public void LoadGame() {
-		SceneManager.LoadScene("game",LoadSceneMode.Single);
+		SceneManager.LoadScene(name,LoadSceneMode.Single);
 	}
 }

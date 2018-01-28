@@ -7,7 +7,7 @@ public class RadioTower : MonoBehaviour {
 	private GameObject player;
 	public float tickRate = 3.0f;
 	public int startingCurrencyPerTick = 1;
-	
+	public Zone zone;
 	private int currencyPerTick;
 	// Use this for initialization
 	void Start () {
