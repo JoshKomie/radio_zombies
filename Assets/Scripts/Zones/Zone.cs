@@ -5,10 +5,13 @@ using UnityEngine;
 public class Zone : MonoBehaviour {
 
 	public GameObject RadioTowerPrefab;
-
+    public GameObject CementaryPrefab;
+    public GameObject RegularTurretPrefab;
+    public GameObject[] BuildSites;
+    public string zoneType = "empty";
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -16,7 +19,37 @@ public class Zone : MonoBehaviour {
 		
 	}
 
-	public void BuildTower() {
+	public bool BuildTower() {
+        zoneType = "RadioTower";
 		Instantiate(RadioTowerPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        return true;
 	}
+
+    public void BuildCementary()
+    {
+        zoneType = "Cemetary";
+        Instantiate(CementaryPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+    }
+
+    // public void BuildRegularTurret(int buildSiteIndex)
+    // {
+    //     GameObject turret = Instantiate(RegularTurretPrefab, new Vector2(BuildSites[buildSiteIndex].transform.position.x, BuildSites[buildSiteIndex].transform.position.y), Quaternion.identity) as GameObject;
+    //     // structures[buildSiteIndex] = turret;
+    //     structures[buildSiteIndex] = new GameObject();
+    //     BuildSites[i].GetComponent<BuildSite>().Build
+    // }
+
+    public void ShowAvailableBuildSites() {
+        for (int i = 0; i < BuildSites.Length; i++) {
+            if (BuildSites[i].GetComponent<BuildSite>().occupant == "empty") {
+                BuildSites[i].GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
+    }
+
+    public void hideAvailableBuildSites() {
+        for (int i = 0; i < BuildSites.Length; i++) {
+            BuildSites[i].GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
 }
