@@ -36,11 +36,27 @@ public class PlayerInput : MonoBehaviour {
 		selectBuildSiteMode = true;
 		world.GetComponent<ZoneGenerator>().showAvailableStructureSpots();
 		world.GetComponent<ZoneGenerator>().DisableZoneSelects();
+
+		GameObject[] structures = GameObject.FindGameObjectsWithTag("Structure");
+		for (int i = 0; i < structures.Length; i++) {
+			Collider2D c = structures[i].GetComponent<Collider2D>();
+			if (c) {
+				c.enabled = false;
+			}
+		}
 	}
 	public void DisableSelectBuildSiteMode() {
 		selectBuildSiteMode = false;
 		world.GetComponent<ZoneGenerator>().EnableZoneSelects();
 		world.GetComponent<ZoneGenerator>().hideAllStructureSpots();
+
+		GameObject[] structures = GameObject.FindGameObjectsWithTag("Structure");
+		for (int i = 0; i < structures.Length; i++) {
+			Collider2D c = structures[i].GetComponent<Collider2D>();
+			if (c) {
+				c.enabled = true;
+			}
+		}
 	}
 
 	public bool selectBuildSiteModeEnabled() {

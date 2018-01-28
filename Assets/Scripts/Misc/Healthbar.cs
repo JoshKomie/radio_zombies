@@ -5,6 +5,7 @@ using UnityEngine;
 public class Healthbar : MonoBehaviour {
 
 	public GameObject HealthbarPrefab;
+	
 	// Use this for initialization
 	void Start () {
 		

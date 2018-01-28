@@ -7,6 +7,8 @@ TagManager:
   - Undefined
   - Zombie
   - RadioTower
+  - BuildSite
+  - Structure
   layers:
   - Default
   - TransparentFX

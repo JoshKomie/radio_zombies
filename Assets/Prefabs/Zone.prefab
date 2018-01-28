@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 60500286961438364}
   m_Layer: 0
   m_Name: BuildSite1
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 60308229654940824}
   m_Layer: 0
   m_Name: BuildSite3
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 60135194401453248}
   m_Layer: 0
   m_Name: BuildSite5
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 60207832134748792}
   m_Layer: 0
   m_Name: BuildSite6
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 60341037120058974}
   m_Layer: 0
   m_Name: BuildSite4
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 60226291007694548}
   m_Layer: 0
   m_Name: BuildSite2
-  m_TagString: Untagged
+  m_TagString: BuildSite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -303,7 +303,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -332,7 +332,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -361,7 +361,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -390,7 +390,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -419,7 +419,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -486,6 +486,8 @@ MonoBehaviour:
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
   occupant: empty
 --- !u!114 &114424377804791826
 MonoBehaviour:
@@ -541,6 +543,8 @@ MonoBehaviour:
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
   occupant: empty
 --- !u!114 &114764511038982174
 MonoBehaviour:
@@ -556,6 +560,8 @@ MonoBehaviour:
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
     type: 2}
   occupant: empty
 --- !u!114 &114921520977198592
@@ -573,6 +579,8 @@ MonoBehaviour:
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
   occupant: empty
 --- !u!114 &114939430242598888
 MonoBehaviour:
@@ -589,6 +597,8 @@ MonoBehaviour:
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
     type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
+    type: 2}
   occupant: empty
 --- !u!114 &114989663873308056
 MonoBehaviour:
@@ -604,6 +614,8 @@ MonoBehaviour:
   TurretPrefab: {fileID: 1338464867028634, guid: a32bcbd145616c0488b9af036bc32252,
     type: 2}
   BarracksPrefab: {fileID: 1382722830278774, guid: 4dc4377251f152c4aa797f8d298190b2,
+    type: 2}
+  FlameTurretPrefab: {fileID: 1316834453991864, guid: 5db703a3e4cd7b849ab192ea7768100e,
     type: 2}
   occupant: empty
 --- !u!212 &212019984714494412
